@@ -1,0 +1,7 @@
+[
+    {
+        "_id": "test-website-id",
+        "display_name": "Test website",
+        "is_default_website": true
+    }
+]
