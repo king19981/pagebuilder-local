@@ -1,0 +1,12 @@
+
+.vscode
+.idea
+**/.DS_Store
+*.log
+
+.env
+.npmrc
+
+node_modules
+.fusion
+dist

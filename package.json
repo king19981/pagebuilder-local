@@ -1,0 +1,74 @@
+{
+  "name": "@code-store-platform/arcxp-common-blocks",
+  "version": "1.0.0",
+  "description": "Common (and custom) ArcXP Themes Blocks",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "node deploy-bundle.js --experimental-network-imports",
+    "fusion": "fusion",
+    "lint": "eslint \"**/*.{js,jsx}\"",
+    "lint:fix": "eslint \"**/*.{js,jsx}\" --fix",
+    "prepare": "husky install",
+    "start": "fusion start",
+    "test:coverage": "jest --coverage",
+    "test:watch": "npm run test -- --watch -o --coverage",
+    "test": "jest"
+  },
+  "files": [
+    "index.js",
+    "src/*"
+  ],
+  "devDependencies": {
+    "@arc-fusion/cli": "^2.1.0",
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "@babel/preset-react": "^7.22.5",
+    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+    "babel-jest": "^29.6.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.7",
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-no-comments": "^1.1.10",
+    "eslint-plugin-react": "^7.33.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
+    "jest": "^29.6.2",
+    "jest-environment-jsdom": "^29.6.2",
+    "jsdom": "22.1.0",
+    "jsdom-global": "3.0.2",
+    "lint-staged": "^13.2.3",
+    "prettier": "3.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "dotenv": "^16.3.1",
+    "form-data": "^4.0.0",
+    "uid": "^2.0.2"
+  },
+  "author": "",
+  "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{html,css,less,scss,ejs}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.js"
+    ]
+  }
+}
