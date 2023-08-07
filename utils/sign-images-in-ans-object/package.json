@@ -1,0 +1,11 @@
+{
+  "name": "@code-store-platform/sign-images-in-ans-object",
+  "version": "1.0.0",
+  "description": "Sign Images In Ans Object",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "author": "",
+  "license": "ISC"
+}
